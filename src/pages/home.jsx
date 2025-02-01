@@ -2,12 +2,12 @@ import React from "react";
 import "../styles/App.css";
 
 
-const Home = ()=>{
+function Home() {
     return (
-
-<p>hola que tal this is the home page</p>
+        <div className="home-container">
+      <div className="home-background" ></div>
+        </div>
     );
-    
-    };
-
-    export default Home; 
+  }
+  
+  export default Home;
