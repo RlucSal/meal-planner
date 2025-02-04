@@ -70,12 +70,12 @@ const AuthForm = () => {
 
   // Unified function to store user data (whether from Google or manual signup)
   const storeUserData = async (userData, name) => {
-    const db = getFirestore(); // Initialize Firestore
+    const db = getFirestore(); 
     const { email, uid } = userData;
 
     // Add user data to Firestore
     await setDoc(doc(db, "users", uid), {
-      name: name || userData.displayName, // Use name from Google or form input
+      name: name || userData.displayName, 
       email: email,
     });
   };
