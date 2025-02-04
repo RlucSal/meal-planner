@@ -30,3 +30,118 @@
   background-position: center;
   opacity: 0.9; 
 }
+
+
+.container-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.imput-form {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.imput-form:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.button-submit,
+.sets-login-signup,
+.log-out,
+.google {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.button-submit {
+  background: #007bff;
+  color: #fff;
+}
+
+.button-submit:hover {
+  background: #0056b3;
+}
+
+.sets-login-signup {
+  background: transparent;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.sets-login-signup:hover {
+  color: #0056b3;
+}
+
+.log-out {
+  background: #dc3545;
+  color: #fff;
+}
+
+.log-out:hover {
+  background: #c82333;
+}
+
+.google {
+  background: #db4437;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.google:hover {
+  background: #c1351d;
+}
+
+.google::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../src/assets/img/logo.webp");
+  background-size: cover;
+}
+
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

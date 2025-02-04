@@ -58,11 +58,11 @@ const AuthForm = () => {
   };
 
   return (
-    <div>
-      <h2>{isLogin ? "Login" : "Sign Up"}</h2>
+    <div className="container-form">
+      <h2 className="title">{isLogin ? "Login" : "Sign Up"}</h2>
       {user && <p>Welcome, {user.email}!</p>}
-      <form onSubmit={handleSubmit}>
-        <input
+      <form className= "form"onSubmit={handleSubmit}>
+        <input className="imput-form"
           type="email"
           placeholder="Email"
           value={email}
@@ -70,24 +70,25 @@ const AuthForm = () => {
           required
           autoFocus
         />
-        <input
+        <input className="imput-form"
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" disabled={loading}>
+        <button className= " button-submit" type="submit" disabled={loading}>
           {loading ? "Loading..." : isLogin ? "Login" : "Sign Up"}
         </button>
-      </form>
-      <button onClick={() => setIsLogin(!isLogin)}>
+      
+      <button className="sets-login-signup" onClick={() => setIsLogin(!isLogin)}>
         {isLogin ? "Need an account? Sign Up" : "Already have an account? Login"}
       </button>
-      {user && <button onClick={handleLogout}>Logout</button>}
-      <button onClick={handleGoogleSignIn} disabled={loading}>
+      {user && <button className="log-out" onClick={handleLogout}>Logout</button>}
+      <button className =" google"  onClick={handleGoogleSignIn} disabled={loading}>
         {loading ? "Loading..." : "Sign in with Google"}
       </button>
+      </form>
     </div>
   );
 };
