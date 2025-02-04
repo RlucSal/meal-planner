@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -14,6 +16,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
+const db = getFirestore(app);
+
 
 
 const signInWithGoogle = async () => {
@@ -26,4 +30,25 @@ const signInWithGoogle = async () => {
     }
   };
 
-export { auth, signInWithGoogle };
+  const getData = async () => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "users"));
+      querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+      });
+    } catch (error) {
+      console.error("Error getting documents: ", error);
+    }
+  };
+  
+  // Example function to add data to Firestore
+  const addUser = async (userData) => {
+    try {
+      const docRef = await addDoc(collection(db, "users"), userData);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+  };
+
+export { auth, signInWithGoogle, db, getData, addUser };

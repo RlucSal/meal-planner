@@ -2,46 +2,76 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 .home-container {
-  display: flex;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh
 }
 
-.home-background {
+
+.home-background,
+.sign-page {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
 }
 
-.home-background::before {
+.home-background::before
+ {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../src/assets/img/food_background.webp");
+  background-image: url(""); 
   background-size: cover;
   background-position: center;
-  opacity: 0.9; 
+  opacity: 0.9;
 }
 
+
+
+/*sign page*/
+
+.sign-page {
+  background-image: url("../src/assets/img/dishes.webp"); 
+}
+.hero1{
+  text-align: center;
+  color:#000;
+  font-size:2rem;
+  margin-top: 4.5rem;
+
+}
+.hero2 {
+  color: whitesmoke;
+  font-size: 8rem;
+  text-align: center;
+  margin-top: -3rem;
+  margin-bottom: 2.2rem;
+  
+}
 
 .container-form {
   max-width: 400px;
-  margin: 50px auto;
   padding: 20px;
-  background: #fff;
+  background: #ffc300;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  margin-left: 36.9%;
 }
-
 
 .title {
   font-size: 24px;
@@ -49,7 +79,6 @@
   margin-bottom: 20px;
   color: #333;
 }
-
 
 .imput-form {
   width: 100%;
@@ -60,13 +89,11 @@
   font-size: 16px;
   transition: 0.3s;
 }
-
 .imput-form:focus {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
-
 
 .button-submit,
 .sets-login-signup,
@@ -83,12 +110,12 @@
 }
 
 .button-submit {
-  background: #007bff;
+  background: green;
   color: #fff;
 }
 
 .button-submit:hover {
-  background: #0056b3;
+  background: rgb(2, 77, 2);
 }
 
 .sets-login-signup {

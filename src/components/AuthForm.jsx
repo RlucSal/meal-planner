@@ -58,6 +58,9 @@ const AuthForm = () => {
   };
 
   return (
+    <div className="sign-page">
+      <h6 className="hero1">Welcome to</h6>
+      <h1 className="hero2">mymeal</h1>
     <div className="container-form">
       <h2 className="title">{isLogin ? "Login" : "Sign Up"}</h2>
       {user && <p>Welcome, {user.email}!</p>}
@@ -89,6 +92,7 @@ const AuthForm = () => {
         {loading ? "Loading..." : "Sign in with Google"}
       </button>
       </form>
+    </div>
     </div>
   );
 };
