@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import { signUp, login, logout } from "../services/authService";
 import { signInWithGoogle } from "../services/firebaseConfig";
-import { getFirestore, doc, setDoc } from "firebase/firestore"; // Firestore imports
+import { getFirestore, doc, setDoc } from "firebase/firestore"; 
 
 const AuthForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState(""); // Name for manual sign up
+  const [name, setName] = useState(""); 
   const [isLogin, setIsLogin] = useState(true);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,7 @@ const AuthForm = () => {
     console.log("Form Submitted");
     console.log("Email Value:", email); 
     console.log("Password Value:", password);
-    console.log("Name Value:", name); // For manual sign up
+    console.log("Name Value:", name); 
 
     setLoading(true);
     try {
